@@ -11,23 +11,6 @@ float CGPA(float percent);
 int Pass(int marks[]);
 void Result(char name[], int roll, int marks[],int total,float percent,float cgpa);
 
-// Main Function
-void main()
-{
-    char name[40];
-    int roll;
-    int marks[subjects];
-    int total;
-    float percent,cgpa;
-
-    studentdetails(name ,&roll,marks);
-
-    total=totalmarks(marks);
-    percent=Percentage(total);
-    cgpa=CGPA(percent);
-
-    Result(name,roll,marks,total,percent,cgpa);
-}
 
 //Taking Student Details & Marks
 void studentdetails(char name[],int *roll,int marks[])
@@ -124,4 +107,24 @@ void Result(char name[],int roll ,int marks[],int total ,float percent,float cgp
     printf("Grade : D\n");
     
     }
+
+    // Main Function
+void main()
+{
+    char name[40];
+    int roll;
+    int marks[subjects];
+    int total;
+    float percent,cgpa;
+
+    studentdetails(name ,&roll,marks);
+
+    total=totalmarks(marks);
+    percent=Percentage(total);
+    cgpa=CGPA(percent);
+
+    Result(name,roll,marks,total,percent,cgpa);
+}
+
+
 }
